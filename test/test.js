@@ -6,7 +6,7 @@ var expect = chai.expect;
 chai.use(chaiAsPromised);
 chai.use(require('chai-things'));
 
-var wordNet = require('../src/index.js')();
+var wordNet = require('../src/index.js')("../data/to-json", true);
 
 describe('wordNet', function() {
 	  describe('Word', function tests() {
