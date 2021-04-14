@@ -1,0 +1,65 @@
+function loader(name){
+	
+	return new Promise(function(resolve, reject) {
+		var d=require("d:/home/"+name.toLowerCase()+".json");
+		resolve(d);
+	  });
+}
+
+
+
+
+	if (wn.preload === true){
+		wn.SAMPLES =   loader("SAMPLES");
+		wn.SEMLINKS = loader("SEMLINKS");
+
+		wn.SEMLINKS.HYPERNYMS = loader("SEMLINKS.HYPERNYMS");	
+		
+
+		wn.SEMLINKS.SISTERS  = loader("SEMLINKS.SISTERS");
+
+		var long_query = "SELECT s.synsetid AS synsetid, s.definition AS definition, s.pos AS pos, s.lemma AS lemma, " +
+      "s.sensenum AS sensenum, l.lexdomainname AS lexdomain " +
+      "FROM wordsXsensesXsynsets AS s LEFT JOIN lexdomains AS l ON l.lexdomainid = s.lexdomainid";
+		wn.WORDSxSENSESxSYNSETSxLEXDOMAINS  = loader("WORDSxSENSESxSYNSETSxLEXDOMAINS");
+
+
+		
+
+
+
+
+
+ 		var synXlex_query = "SELECT ss.synsetid AS synsetid, ss.pos AS pos, ld.lexdomainname AS lexdomain, ss.definition AS definition";
+		synXlex_query += " FROM synsets AS ss INNER JOIN lexdomains AS ld ON ld.lexdomainid = ss.lexdomainid";
+		wn.SYNSETSxLEXDOMAINS  = loader("SYNSETSxLEXDOMAINS");
+
+	
+	}
+
+	wn.MORPHY_SUBSTITUTIONS = {
+			  NOUN:
+		      [{ suffix: 's', ending: ''},
+		       { suffix: 'ses', ending: 's'},
+		       { suffix: 'ves', ending: 'f'},
+  			   { suffix: 'xes', ending: 'x'},
+  			   { suffix: 'zes', ending: 'z'},
+  			   { suffix: 'ches', ending: 'ch'},
+  			   { suffix: 'shes', ending: 'sh'},
+  			   { suffix: 'men', ending: 'man'},
+  			   { suffix: 'ies', ending: 'y'}],
+			  VERB:
+		      [{ suffix: 's', ending: ''},
+		       { suffix: 'ies', ending: 'y'},
+		       { suffix: 'es', ending: 'e'},
+		       { suffix: 'es', ending: ''},
+		       { suffix: 'ed', ending: 'e'},
+		       { suffix: 'ed', ending: ''},
+		       { suffix: 'ing', ending: 'e'},
+		       { suffix: 'ing', ending: ''}],
+			  ADJECTIVE:
+		      [{ suffix: 'er', ending: ''},
+		       { suffix: 'est', ending: ''},
+		       { suffix: 'er', ending: 'e'},
+		       { suffix: 'est', ending: 'e'}]
+			};
