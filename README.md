@@ -2,11 +2,11 @@ node-wordnet-magic-nosql
 ========================
 
 I took the starting code from node-wordnet-magic https://github.com/Planeshifter/node-wordnet-magic and removed dependency on sqlite, so it depends on json now. NO more sqlite problems :) 
-----------------------------------------------------------------
-For docs on how to use this, see below or on the original node-wordnet-magic repo https://github.com/Planeshifter/node-wordnet-magic . Still much respect for the original source. I just needed something simpler with same functionality
-----------------------------------------------------------------
+___
+For docs on how to use this, see below or on the original node-wordnet-magic repo https://github.com/Planeshifter/node-wordnet-magic . Still much respect for the original source. I just needed something ms faster,simpler, that works in azure function  with same functionality
+___
 Big thanks to Planeshifter https://github.com/Planeshifter for this inspiration. 
-----------------------------------------------------------------
+___
 
 
 [![NPM version][npm-image]][npm-url]
