@@ -1,0 +1,43 @@
+{
+  "name": "node-wordnet-magic-nosql",
+  "version": "0.0.1",
+  "description": "tools for working with Princeton's lexical database WordNet",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "test-cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coveralls/coverage --report lcovonly -- -R spec && cat ./reports/coveralls/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./reports/coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contactsamie/node-wordnet-magic-nosql/tree/main"
+  },
+  "keywords": [
+    "WordNet",
+    "semantic-web",
+    "NLP",
+    "lexical-database"
+  ],
+  "author": "Philipp Burckhardt,Sam Bamgboye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/contactsamie/node-wordnet-magic-nosql/tree/main/issues"
+  },
+  "homepage": "https://github.com/contactsamie/node-wordnet-magic-nosql/tree/main",
+  "dependencies": {
+    "bluebird": "^2.2.2",
+    "mysql": "~2.5.5",
+    "sqlite3": "^5.0.2",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "chai-as-promised": "^4.3.0",
+    "chai-things": "^0.2.0",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.8",
+    "jshint": "^2.6.3",
+    "jshint-stylish": "^1.0.1",
+    "mocha": "^2.2.1"
+  }
+}
