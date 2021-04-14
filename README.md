@@ -5,7 +5,7 @@ https://www.npmjs.com/package/node-wordnet-magic-nosql
 ___
 I took the starting code from node-wordnet-magic https://github.com/Planeshifter/node-wordnet-magic and removed dependency on sqlite, so it depends on json now. NO more sqlite problems :) 
 ___
-For docs on how to use this, see below or on the original node-wordnet-magic repo https://github.com/Planeshifter/node-wordnet-magic . Still much respect for the original source. I just needed something ms faster,simpler, that works in azure function  with same functionality
+For docs on how to use this, see below or on the original node-wordnet-magic repo https://github.com/Planeshifter/node-wordnet-magic . Still much respect for the original source. I just needed something blazingly near single digit milliseconds fast,simpler, that works in azure function without any file sharing issues while still having same functionality as the original node-wordnet-magic 
 ___
 Big thanks to Planeshifter https://github.com/Planeshifter for this inspiration. 
 ___
